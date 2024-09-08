@@ -31,3 +31,11 @@ python manage.py runserver
 
 # Criando aplicação
 python manage.py startapp products
+
+# Trabalhando com migrations
+
+## Gerar a migração
+python manage.py makemigrations
+
+## Rodar a migração
+python manage.py migrate
