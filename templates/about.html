@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About</title>
-</head>
-
-<body>
+{% extends 'layout.html' %}
+{% block title %}
+  About
+{% endblock %}
+{% block content %}
   <h2>About me</h2>
+  <hr />
   <ul>
     {% for frutas in frutas %}
-    <li>{{frutas}}</li>
+      <li>{{ frutas }}</li>
     {% endfor %}
   </ul>
-  <hr>
-  <p>Acesse a página <a href="/">home</a></p>
-</body>
-
-</html>
+{% endblock %}
