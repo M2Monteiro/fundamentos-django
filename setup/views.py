@@ -1,11 +1,16 @@
-# from django.http import HttpResponse
 from django.shortcuts import render
 
+
 def homepage(request):
-    # return HttpResponse("Hello World!")
-    return render(request, 'home.html')
+    nome = "Matheus"
+    pessoa = {
+        'nome': 'Maria',
+        'idade': 30,
+        'cidade': 'Belém'
+    }
+    return render(request, "home.html", {"nome": nome, 'pessoa': pessoa})
 
 
 def about(request):
-    # return HttpResponse("About me")
-    return render(request, 'about.html')
+    frutas = ["Maçã", "Banana", "Laranja", "Uva"]
+    return render(request, "about.html", {"frutas": frutas})
