@@ -28,3 +28,6 @@ django-admin startproject nome-do-projeto .
 
 ## Executando o projeto
 python manage.py runserver
+
+# Criando aplicação
+python manage.py startapp products
