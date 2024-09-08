@@ -15,3 +15,16 @@ pip freeze > requirements.txt
 
 ## Para instalar as dependências
 pip install -r ./requirements.txt
+
+## Criando projeto Django
+No Django temos um relacionamento 1:N ou seja um projeto tem várias aplicações
+
+django-admin startproject nome-do-projeto
+
+ou criar os arquivos dentro de uma pasta já existente 
+
+navegue até a pasta e rode:
+django-admin startproject nome-do-projeto .
+
+## Executando o projeto
+python manage.py runserver
