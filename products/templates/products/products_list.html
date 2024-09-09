@@ -4,4 +4,15 @@
 {% endblock %}
 {% block content %}
   <h2>Product List</h2>
+  <hr />
+  <section>
+    {% for product in products %}
+      <article>
+        <h3>{{ product.name }}</h3>
+        <h3>R$: {{ product.price }}</h3>
+        <h3>Estoque: {{ product.stock }}</h3>
+        <hr />
+      </article>
+    {% endfor %}
+  </section>
 {% endblock %}
