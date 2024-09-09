@@ -4,6 +4,7 @@
 {% endblock %}
 {% block content %}
   <section>
+    <img src="{{ product.banner.url }}" alt="{{ product.name }}" />
     <h2>{{ product.name }}</h2>
     <p>R$: {{ product.price }}</p>
     <p>Estoque: {{ product.stock }}</p>

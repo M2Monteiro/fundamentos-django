@@ -7,6 +7,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     stock = models.PositiveIntegerField()
     slug = models.SlugField()
+    banner = models.ImageField(blank=True)
     created_at = models.DateTimeField(auto_created=True)
 
     def __str__(self):
