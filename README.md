@@ -39,3 +39,6 @@ python manage.py makemigrations
 
 ## Rodar a migração
 python manage.py migrate
+
+# Criando um usuário para acessar o admin
+python manage.py createsuperuser
