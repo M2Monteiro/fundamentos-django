@@ -17,12 +17,17 @@
       <a href="/">Home</a>
       <a href="/about">About</a>
       <a href="{% url 'products:list' %}">Products</a>
-      <a href="{% url 'users:register' %}">SignUp</a>
-      <a href="{% url 'users:login' %}">Login</a>
-      <form class="logout" action="{% url 'users:logout' %}" method="POST">
-        {% csrf_token %}
-        <button class="logout-button">Logout</button>
-      </form>
+      <a href="{% url 'products:new' %}">Novo Produto</a>
+      {% if user.is_authenticated %}
+        <form class="logout" action="{% url 'users:logout' %}" method="POST">
+          {% csrf_token %}
+          <button class="logout-button">Logout</button>
+        </form>
+      {% else %}
+        <a href="{% url 'users:register' %}">SignUp</a>
+        <a href="{% url 'users:login' %}">Login</a>
+      {% endif %}
+
       <a href="/admin">Admin</a>
     </nav>
     <main>
